@@ -1,0 +1,16 @@
+<aura:component implements="flexipage:availableForAllPageTypes,flexipage:availableForRecordHome,force:hasRecordId" 
+                access="global" controller="DeficiencySnippetController" >
+    
+    <aura:attribute type="String[]" name="appMetadata" />
+    <aura:handler event="c:DeficiencyPicklistSelected" action="{!c.handleUpdateSelection}"/>
+
+    <lightning:card>
+        <aura:iteration items="{!v.appMetadata}" var="data">
+            <lightning:textarea value="{!data}" class="textArea" />
+        </aura:iteration>
+        	
+
+    </lightning:card>
+
+    
+</aura:component>
